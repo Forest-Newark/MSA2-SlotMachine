@@ -21,7 +21,7 @@ public class Controller {
     Person player = new Person("Bob",150);
 
     public void play(ActionEvent actionEvent) {
-        if (!betInput.getText().isEmpty()){
+        if (!betInput.getText().isEmpty() && !betInput.getText().matches(".*[a-zA-Z]+.*")){
             int currentBet = Integer.parseInt(betInput.getText());
             if (currentBet > 0 && player.getMoney() > 0 && currentBet < player.getMoney()) {
                 player.setBet(currentBet);
@@ -46,11 +46,6 @@ public class Controller {
         }
     }
 }
-
-// Last bug fix - no alphabets
-//19    private List<String> letters = new ArrayList<>();
-//24        letters = Arrays.asList("a","b","c","d");
-//        if (!betInput.getText().isEmpty()|| !letters.contains(betInput.getText())) {
 
 // Option for better chance to win: Change lines 33 - 43 to code below
 /*
