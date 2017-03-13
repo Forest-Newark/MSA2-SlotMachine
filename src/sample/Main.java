@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
+    //Start method required by JavaFX
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
@@ -16,7 +17,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
+    //Launches the application
     public static void main(String[] args)
     {
         launch(args);
